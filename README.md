@@ -4,7 +4,7 @@
 
 ## Usage
 
-Simply visit [here](insert link here)
+Simply visit [here](https://sonny-maan.github.io/NodeChat/)
 
   ***or*** 
 
