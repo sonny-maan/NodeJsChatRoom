@@ -6,7 +6,7 @@
 
 Clone the project repo from [here](https://github.com/sonny-maan/NodeChat)
 
-***and run***
+***then run***
 
 ```
 npm run dev
