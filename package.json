@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/sonny-maan/NodeChat#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "socket.io": "^2.3.0"
   }
 }
