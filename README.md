@@ -12,8 +12,8 @@ Clone the project repo
 
 ****and* run***
 
-```c#
-
+```
+npm run dev
 ```
 
 
