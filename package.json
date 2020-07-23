@@ -1,0 +1,19 @@
+{
+  "name": "nodechat",
+  "version": "1.0.0",
+  "description": "A real time chat room using Node Js, Express & web sockets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonny-maan/NodeChat.git"
+  },
+  "author": "Amritpal Maan (Sonny)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonny-maan/NodeChat/issues"
+  },
+  "homepage": "https://github.com/sonny-maan/NodeChat#readme"
+}
