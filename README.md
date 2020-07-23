@@ -4,13 +4,9 @@
 
 ## Usage
 
-Simply visit [here](https://sonny-maan.github.io/NodeChat/)
+Clone the project repo from [here](https://github.com/sonny-maan/NodeChat)
 
-  ***or*** 
-
-Clone the project repo
-
-****and* run***
+***and run***
 
 ```
 npm run dev
