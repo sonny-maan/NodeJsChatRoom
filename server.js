@@ -9,11 +9,18 @@ const io = socketio(server);
 
 //Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
-
-//Run socket io when a client connects
 io.on('connection', socket => {
-  console.log('new web socket connection');
+  
+//Welcome a user to the chat
   socket.emit('message', 'Welcome to NodeChat!');
+  
+//Broadcast a message to all other users when someone new enters the room
+  socket.broadcast.emit('message', 'A user has entered the chat!');
+  
+//Message when a user leaves the chat room
+  socket.on('disconnect', () => {
+    io.emit('message', 'A user has left the chat!');
+  });
 });
 
 const PORT = 3000 || process.env.PORT;
