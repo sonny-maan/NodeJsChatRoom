@@ -3,7 +3,7 @@ const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
-const {getCurrentUser, userJoin} = require('./utils/users');
+const {getCurrentUser, userJoin, getRoomUsers, userLeaves} = require('./utils/users');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
@@ -32,7 +32,11 @@ io.on('connection', socket => {
   
 //Message when a user leaves the chat room
   socket.on('disconnect', () => {
-    io.emit('message', formatMessage(botName, 'A user has left the chat!'));
+    const user = userLeaves(socket.id);
+    if(user) {
+      io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat!`));
+    }
+
   });
   
 });
