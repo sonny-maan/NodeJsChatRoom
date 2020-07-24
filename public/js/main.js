@@ -1,10 +1,15 @@
 const socket = io();
 const chatForm = document.getElementById('chat-form');
+const chatMessages = document.querySelector('.chat-messages');
 
 //Get message from server and output
 socket.on('message', message => {
   console.log(message);
   outputMessage(message);
+
+//Scroll down anytime a message is received
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
 });
 
 //User submits message
