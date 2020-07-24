@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Run socket io when a client connects
 io.on('connection', socket => {
   console.log('new web socket connection');
+  socket.emit('message', 'Welcome to NodeChat!');
 });
 
 const PORT = 3000 || process.env.PORT;
