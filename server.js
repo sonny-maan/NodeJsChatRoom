@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
+const formatMessage = require('./utils/messages')
 
 const app = express();
 const server = http.createServer(app);
@@ -11,20 +12,22 @@ const io = socketio(server);
 app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', socket => {
   
+  const botName = 'ChatBot';
+  
 //Welcome a user to the chat
-  socket.emit('message', 'Welcome to NodeChat!');
+  socket.emit('message', formatMessage(botName, 'Welcome to NodeChat!'));
   
 //Broadcast a message to all other users when someone new enters the room
-  socket.broadcast.emit('message', 'A user has entered the chat!');
+  socket.broadcast.emit('message', formatMessage(botName, 'A user has entered the chat!'));
   
 //Message when a user leaves the chat room
   socket.on('disconnect', () => {
-    io.emit('message', 'A user has left the chat!');
+    io.emit('message', formatMessage(botName, 'A user has left the chat!'));
   });
   
 //Listen for chat messages
   socket.on('chatMessage', (msg) => {
-    io.emit('message', msg);
+    io.emit('message', formatMessage('USER', msg));
   });
   
 });
