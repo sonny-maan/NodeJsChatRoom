@@ -21,8 +21,14 @@ io.on('connection', socket => {
   
 //Broadcast a message to all other users when someone new enters the room
   socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the chat!`));
-  
+// Send Users and Room info
+  io.to(user.room).emit('roomUsers', {
+    room: user.room,
+    users: getRoomUsers(user.room)
   });
+  });
+  
+
 
 //Listen for chat messages
   socket.on('chatMessage', (msg) => {
@@ -35,6 +41,11 @@ io.on('connection', socket => {
     const user = userLeaves(socket.id);
     if(user) {
       io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat!`));
+    //Send User and room info
+    io.to(user.room).emit('roomUsers', {
+    room: user.room,
+    users: getRoomUsers(user.room)
+  });
     }
 
   });
