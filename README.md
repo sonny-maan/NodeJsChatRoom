@@ -18,7 +18,7 @@ Clone the project repo from [here](https://github.com/sonny-maan/NodeChat)
 
 ```
 npm install
-npm run dev
+npm run start
 ```
 
 
