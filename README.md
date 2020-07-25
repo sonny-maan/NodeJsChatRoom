@@ -4,6 +4,10 @@
 
 ## Usage
 
+This app is deployed on Heroku! To use it simply visit [here](https://node-chat-sm.herokuapp.com/)
+
+***or to run locally / run on Repl.it***
+
 Clone the project repo from [here](https://github.com/sonny-maan/NodeChat)
 
 ***or***
