@@ -6,6 +6,10 @@
 
 Clone the project repo from [here](https://github.com/sonny-maan/NodeChat)
 
+***or***
+
+[![Run on Repl.it](https://repl.it/badge/github/sonny-maan/NodeChat)](https://repl.it/github/sonny-maan/NodeChat)
+
 ***then run***
 
 ```
