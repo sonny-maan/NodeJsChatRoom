@@ -1,4 +1,4 @@
-# NodeChat  -  ![badge](https://img.shields.io/badge/Made--By-Sonny-red) ![badge](https://img.shields.io/badge/Made--Using-JavaScript-brightgreen)
+# NodeChat  -  ![badge](https://img.shields.io/badge/Made--By-Sonny-red) ![badge](https://img.shields.io/badge/Made--Using-JavaScript-brightgreen) ![badge](https://img.shields.io/badge/Deployed--On-Heroku-blueviolet) 
 
 ### ****A  real time chat room* using NodeJs, Socket.io web sockets & Express*** 
 
